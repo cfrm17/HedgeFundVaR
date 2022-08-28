@@ -2,7 +2,7 @@
 
 A model is presented to determine the value at risk (VaR) due to hedge fund volatility during closeout of hedge fund positions, as well as pricing calculations for options written on a basket of funds.
 
-It contains the implemented VaR calculations for options written on a basket of hedge funds, with minor changes and the methodology for calculating the VaR of the LTV (loan to value) ratio for loans to funds-of-funds.
+It contains the implemented VaR calculations for callable options (https://finpricing.com/lib/EqCallable.html)  written on a basket of hedge funds, with minor changes and the methodology for calculating the VaR of the LTV (loan to value) ratio for loans to funds-of-funds.
 
 The portfolio diversification and leverage limits were found to be consistent with increasing conservatism as the number of funds in a basket decreases. It should be noted that these limits cannot be considered as ‘stand alone’ since the characteristics of hedge funds change with strategy and management style–this table must be used in conjunction with other risk-management tools.
 
@@ -17,13 +17,5 @@ Assuming a sudden drop in the basket value–causing immediate trigger–we want
 The distribution of basket value returns is assumed to be normally-distributed with width _B as calculated above. We want to determine the basket value that corresponds to a drop in value to the 99th percentile of this distribution. That is, the value of the basket when it has moved down in value ~ 2.33 standard deviations, which would be over MR months, which is an average over the fund redemption delays:
  
 
-
-Reference:
-
-https://finpricing.com/lib/EqConvertible.html
-
-https://zenodo.org/record/6539777/files/zenodo-hedge-fund-VaR.pdf
-
-https://zenodo.org/record/6539777#.YpDue6gpDq4
 
 
